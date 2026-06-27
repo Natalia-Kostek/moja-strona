@@ -1,11 +1,11 @@
-console.log("LEVEL 3.5 PRO ready");
+const cards = document.querySelectorAll(".card");
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add("active");
+window.addEventListener("scroll", () => {
+  cards.forEach(card => {
+    const rect = card.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      card.style.opacity = "1";
+      card.style.transform = "translateY(0)";
     }
   });
 });
-
-document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
