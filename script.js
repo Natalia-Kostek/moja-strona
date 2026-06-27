@@ -1,17 +1,23 @@
-const cards = document.querySelectorAll(".card");
+// MENU MOBILE
+function toggleMenu(){
+  document.getElementById("nav").classList.toggle("active");
+}
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = 1;
-      entry.target.style.transform = "translateY(0)";
+// ANIMACJE SCROLL
+const elements = document.querySelectorAll(".card, .photo");
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.style.opacity=1;
+      e.target.style.transform="translateY(0)";
     }
   });
 });
 
-cards.forEach(card => {
-  card.style.opacity = 0;
-  card.style.transform = "translateY(30px)";
-  card.style.transition = "0.6s";
-  observer.observe(card);
+elements.forEach(el=>{
+  el.style.opacity=0;
+  el.style.transform="translateY(30px)";
+  el.style.transition="0.6s";
+  observer.observe(el);
 });
