@@ -7,24 +7,26 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #0f0f0f;
+  background: #0b0b0b;
   color: #fff;
 }
 
 /* HEADER */
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  background: rgba(0,0,0,0.8);
+  padding: 20px 40px;
+  background: rgba(0,0,0,0.7);
   backdrop-filter: blur(10px);
+  z-index: 1000;
 }
 
 nav a {
   color: white;
-  margin-left: 15px;
+  margin-left: 20px;
   text-decoration: none;
   transition: 0.3s;
 }
@@ -35,54 +37,71 @@ nav a:hover {
 
 /* HERO */
 .hero {
-  height: 90vh;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  background: linear-gradient(120deg,#111,#333);
+  background: radial-gradient(circle, #1a1a1a, #000);
 }
 
 .hero h1 {
-  font-size: 40px;
+  font-size: 48px;
   animation: fadeIn 1s ease;
 }
 
+.hero p {
+  margin-top: 15px;
+  opacity: 0.8;
+}
+
+.hero-buttons {
+  margin-top: 25px;
+}
+
 .btn {
-  margin-top: 20px;
   padding: 12px 25px;
-  background: #ff9800;
-  color: white;
-  text-decoration: none;
+  margin: 5px;
   border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
   transition: 0.3s;
 }
 
-.btn:hover {
-  transform: scale(1.1);
+.primary {
+  background: #ff9800;
+  color: #000;
 }
 
-/* SEKCJE */
+.ghost {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* SECTIONS */
 .section {
-  padding: 80px 20px;
+  padding: 100px 20px;
   text-align: center;
 }
 
 .dark {
-  background: #1a1a1a;
+  background: #111;
 }
 
 /* GRID */
 .grid {
-  margin-top: 30px;
+  margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
 
 .card {
-  background: #222;
+  background: #1a1a1a;
   padding: 25px;
   border-radius: 12px;
   transition: 0.3s;
@@ -90,24 +109,30 @@ nav a:hover {
 
 .card:hover {
   transform: translateY(-10px);
-  background: #2a2a2a;
+  background: #222;
 }
 
-/* ANIMACJA */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* GLOW EFFECT */
+.glow {
+  box-shadow: 0 0 15px rgba(255,152,0,0.2);
+}
+
+/* CONTACT */
+.contact-box {
+  margin-top: 30px;
+  font-size: 18px;
+  line-height: 1.8;
 }
 
 /* FOOTER */
 footer {
-  text-align: center;
   padding: 20px;
+  text-align: center;
   background: #000;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
