@@ -198,3 +198,14 @@ header{
   background: rgba(13,17,23,0.4);
   border-bottom: 1px solid rgba(255,255,255,0.05);
 }
+.card{
+  background: rgba(22,27,34,0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0,163,255,0.15);
+  transition: 0.3s;
+}
+
+.card:hover{
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0,163,255,0.25);
+}
