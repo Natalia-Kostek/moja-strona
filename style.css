@@ -966,3 +966,20 @@ body{
   margin: 0 auto 20px auto;
   line-height: 1.9;
 }
+/* O FIRMIE FIX */
+#about {
+  padding: 120px 20px;
+}
+
+#about h2 {
+  margin-bottom: 30px;
+}
+
+#about p {
+  max-width: 780px;
+  margin: 0 auto 22px auto;
+  line-height: 2;
+  font-size: 16px;
+  opacity: 0.85;
+  text-align: center;
+}
