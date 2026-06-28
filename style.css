@@ -201,3 +201,11 @@ a{
 header{
   align-items:center;
 }
+.logo img{
+  filter: drop-shadow(0 0 10px rgba(0,163,255,0.3));
+  transition:0.3s;
+}
+
+.logo img:hover{
+  transform: scale(1.05);
+}
