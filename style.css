@@ -174,3 +174,25 @@ header .logo img{
   object-fit: contain;
   display:block;
 }
+html, body{
+  height:100%;
+  margin:0;
+  padding:0;
+}
+
+body{
+  background: radial-gradient(circle at top, #0f172a 0%, #0d1117 40%, #05070c 100%) !important;
+  overflow-x:hidden;
+}
+
+/* glow zawsze ON */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(0,163,255,0.15), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(0,255,200,0.10), transparent 40%);
+  pointer-events:none;
+  z-index:0;
+}
