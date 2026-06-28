@@ -34,12 +34,20 @@ z-index:1000;
 
 /* HERO */
 .hero{
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-position:relative;
-text-align:center;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+  background: radial-gradient(circle at top, #1b2a41, #0d1117);
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(to bottom, transparent, #0d1117);
 }
 
 .slide{
