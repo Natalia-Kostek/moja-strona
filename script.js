@@ -19,11 +19,17 @@ const text="Profesjonalny Retrofit Samochodowy";
 let index=0;
 
 function type(){
-document.getElementById("typing").innerHTML=text.slice(0,index++);
-if(index<=text.length) setTimeout(type,80);
-}
-type();
+document.addEventListener("DOMContentLoaded", () => {
+  const text = "Profesjonalny Retrofit Samochodowy";
+  let i = 0;
 
+  function type() {
+    document.getElementById("typing").innerHTML = text.slice(0, i++);
+    if (i <= text.length) setTimeout(type, 70);
+  }
+
+  type();
+});
 /* PARTICLES */
 const canvas=document.getElementById("particles");
 const ctx=canvas.getContext("2d");
