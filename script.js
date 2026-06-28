@@ -1,36 +1,58 @@
-function toggleMenu() {
-  const nav = document.getElementById("nav");
-  nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+function toggleMenu(){
+const nav=document.getElementById("nav");
+nav.style.display=nav.style.display==="flex"?"none":"flex";
 }
 
-/* HEADER SCROLL */
-window.addEventListener("scroll", () => {
-  document.getElementById("header")
-    .classList.toggle("scrolled", window.scrollY > 50);
+/* HERO SLIDER */
+const slides=document.querySelectorAll(".slide");
+let i=0;
+
+function slider(){
+slides.forEach(s=>s.classList.remove("active"));
+slides[i].classList.add("active");
+i=(i+1)%slides.length;
+}
+setInterval(slider,4000);
+
+/* TYPING EFFECT */
+const text="Profesjonalny Retrofit Samochodowy";
+let index=0;
+
+function type(){
+document.getElementById("typing").innerHTML=text.slice(0,index++);
+if(index<=text.length) setTimeout(type,80);
+}
+type();
+
+/* PARTICLES */
+const canvas=document.getElementById("particles");
+const ctx=canvas.getContext("2d");
+
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let dots=[];
+
+for(let i=0;i<80;i++){
+dots.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+r:Math.random()*2
+});
+}
+
+function draw(){
+ctx.clearRect(0,0,canvas.width,canvas.height);
+ctx.fillStyle="#00a3ff";
+
+dots.forEach(d=>{
+ctx.beginPath();
+ctx.arc(d.x,d.y,d.r,0,Math.PI*2);
+ctx.fill();
+d.y+=0.3;
+if(d.y>canvas.height)d.y=0;
 });
 
-/* SCROLL REVEAL */
-const sections = document.querySelectorAll(".section");
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-    }
-  });
-}, { threshold: 0.15 });
-
-sections.forEach(sec => observer.observe(sec));
-
-/* LIGHTBOX */
-function openLightbox(el) {
-  const lightbox = document.getElementById("lightbox");
-  const img = document.getElementById("lightbox-img");
-
-  img.src = "";
-  lightbox.style.display = "flex";
+requestAnimationFrame(draw);
 }
-
-function closeLightbox() {
-  document.getElementById("lightbox").style.display = "none";
-}
+draw();
