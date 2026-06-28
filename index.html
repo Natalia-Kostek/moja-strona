@@ -166,18 +166,23 @@
   <h2>Kontakt</h2>
 
   <div class="contact-form">
+<form action="https://formsubmit.co/kostekpiotr88@gmail.com" method="POST">
 
-    <form action="https://formsubmit.co/kostekpiotr88@gmail.com" method="POST">
+  <input type="text" name="name" placeholder="Imię i nazwisko" required>
 
-      <input type="text" name="name" placeholder="Imię i nazwisko" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <textarea name="message" placeholder="Wiadomość" required></textarea>
+  <input type="email" name="email" placeholder="Email" required>
 
-      <input type="hidden" name="_captcha" value="false">
+  <!-- NOWE POLE: TELEFON -->
+  <input type="tel" name="phone" placeholder="Numer telefonu">
 
-      <button type="submit">Wyślij</button>
+  <textarea name="message" placeholder="Wiadomość" required></textarea>
 
-    </form>
+  <input type="hidden" name="_captcha" value="false">
+
+  <button type="submit">Wyślij</button>
+
+</form>
+   
 
   </div>
 
