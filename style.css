@@ -167,3 +167,10 @@ p{
   opacity:1;
   transform:none;
 }
+header .logo img{
+  height: 60px !important;
+  max-height: 60px !important;
+  width: auto !important;
+  object-fit: contain;
+  display:block;
+}
