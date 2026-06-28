@@ -109,11 +109,19 @@ header{
   position:fixed;
   bottom:20px;
   right:20px;
-  background:#00a3ff;
-  padding:12px 16px;
+  background:#00ff88;
+  padding:14px 18px;
   border-radius:50px;
-  text-decoration:none;
-  color:white;
+  font-weight:bold;
+  color:#000;
+  box-shadow:0 10px 25px rgba(0,255,136,0.3);
+  animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.08)}
+  100%{transform:scale(1)}
 }
 .cta{
   padding:80px 20px;
