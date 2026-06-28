@@ -176,3 +176,19 @@ nav a.active::after{
   height:2px;
   background:#00a3ff;
 }
+.btn{
+  transition: all 0.3s ease;
+}
+
+.btn:hover{
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,163,255,0.3);
+}
+
+.card{
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover{
+  transform: translateY(-8px) scale(1.03);
+}
