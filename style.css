@@ -390,3 +390,38 @@ p{
 .btn:hover{
   transform: translateY(-4px) scale(1.05);
 }
+body::before{
+  content:"";
+  position:fixed;
+  top:-200px;
+  left:-200px;
+  width:600px;
+  height:600px;
+  background:radial-gradient(circle, rgba(0,163,255,0.25), transparent 60%);
+  filter: blur(80px);
+  animation: moveGlow 12s infinite alternate ease-in-out;
+  z-index:-1;
+}
+
+body::after{
+  content:"";
+  position:fixed;
+  bottom:-200px;
+  right:-200px;
+  width:500px;
+  height:500px;
+  background:radial-gradient(circle, rgba(0,255,200,0.15), transparent 60%);
+  filter: blur(90px);
+  animation: moveGlow2 14s infinite alternate ease-in-out;
+  z-index:-1;
+}
+
+@keyframes moveGlow{
+  0%{transform:translate(0,0);}
+  100%{transform:translate(80px,60px);}
+}
+
+@keyframes moveGlow2{
+  0%{transform:translate(0,0);}
+  100%{transform:translate(-60px,-80px);}
+}
