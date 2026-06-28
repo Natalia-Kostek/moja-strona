@@ -228,3 +228,7 @@ header .logo img{
   max-height: none !important;
   display: block !important;
 }
+body{
+  outline: none !important;
+  border: none !important;
+}
