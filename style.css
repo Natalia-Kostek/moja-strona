@@ -228,3 +228,6 @@ header{
 .btn:hover::after{
   left:100%;
 }
+body{
+  outline: 6px solid red;
+}
