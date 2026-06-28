@@ -133,3 +133,13 @@ border-radius:50px;
 section{
   scroll-margin-top:80px;
 }
+.card{
+transition:0.2s;
+transform-style:preserve-3d;
+will-change: transform;
+}
+
+.card:hover{
+transform: perspective(800px) rotateX(5deg) rotateY(-5deg) translateY(-6px);
+box-shadow:0 20px 40px rgba(0,163,255,0.25);
+}
