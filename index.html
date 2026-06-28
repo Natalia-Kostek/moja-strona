@@ -126,6 +126,31 @@
   <p>📞 +48 663 647 414</p>
   <p>✉️ piotrkostek88@gmail.com</p>
 </section>
+  <div class="contact-form">
+
+  <h3>Napisz do nas</h3>
+
+  <form action="https://formsubmit.co/kostekpiotr88@gmail.com" method="POST">
+
+    <input type="text" name="name" placeholder="Imię i nazwisko" required>
+
+    <input type="email" name="email" placeholder="E-mail" required>
+
+    <input type="tel" name="phone" placeholder="Telefon (opcjonalnie)">
+
+    <textarea name="message" rows="5" placeholder="Opisz czego potrzebujesz..." required></textarea>
+
+    <!-- zabezpieczenie anty-spam -->
+    <input type="hidden" name="_captcha" value="false">
+
+    <!-- po wysłaniu -->
+    <input type="hidden" name="_subject" value="Nowa wiadomość - Auto-System Retrofit">
+
+    <button type="submit">Wyślij wiadomość</button>
+
+  </form>
+
+</div>
 
 <footer>
   © 2026 Auto-System Retrofit
