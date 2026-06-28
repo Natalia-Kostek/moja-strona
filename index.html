@@ -1,161 +1,114 @@
+```html
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Auto-System Retrofit</title>
 
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Auto-System Retrofit | Haki holownicze | PDC | Kamery cofania | Zielona Góra</title>
+
+    <meta name="description"
+        content="Profesjonalny montaż haków holowniczych, wiązek, kamer cofania, czujników parkowania oraz retrofit samochodowy. Zielona Góra.">
+
+    <meta name="keywords"
+        content="Auto-System Retrofit, haki holownicze Zielona Góra, PDC, kamery cofania, kodowanie, retrofit">
+
+    <meta name="theme-color" content="#0d1117">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<!-- HERO SLIDER -->
-<section class="hero">
+<div id="loader">
+    <div class="loader-logo">
+        <img src="logo.png" alt="Auto-System Retrofit">
+    </div>
+</div>
 
-  <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');"></div>
-  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1511910849309-0dffb8782c6d');"></div>
-  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1502877338535-766e1452684a');"></div>
+<header class="header">
 
-  <header>
     <div class="logo">
-      <img src="logo.png" alt="logo">
+        <img src="logo.png" alt="Auto-System Retrofit">
     </div>
 
     <nav>
-      <a href="#about">O firmie</a>
-      <a href="#services">Usługi</a>
-      <a href="#reviews">Opinie</a>
-      <a href="#contact">Kontakt</a>
+
+        <a href="#about">O firmie</a>
+        <a href="#services">Usługi</a>
+        <a href="#reviews">Opinie</a>
+        <a href="#gallery">Realizacje</a>
+        <a href="#contact">Kontakt</a>
+
     </nav>
-  </header>
 
-  <div class="hero-content">
-    <h1>Auto-System Retrofit</h1>
-    <p>Haki holownicze • czujniki parkowaia • Kamery cofania • Kodowanie wiązek haków holowniczych • Radioodtwarzacze samochodowe • regeneracja reflektorów</p>
-    <a class="btn" href="#services">Zobacz ofertę</a>
-  </div>
+    <a class="header-phone" href="tel:+48663647414">
+        📞 663 647 414
+    </a>
+
+</header>
+
+<section class="hero">
+
+    <div class="overlay"></div>
+
+    <div class="slide active"
+        style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');">
+    </div>
+
+    <div class="slide"
+        style="background-image:url('https://images.unsplash.com/photo-1511910849309-0dffb8782c6d');">
+    </div>
+
+    <div class="slide"
+        style="background-image:url('https://images.unsplash.com/photo-1502877338535-766e1452684a');">
+    </div>
+
+    <div class="hero-content">
+
+        <span class="hero-badge">
+            ★ Profesjonalny montaż wyposażenia samochodowego
+        </span>
+
+        <h1>
+            Auto-System <span>Retrofit</span>
+        </h1>
+
+        <p>
+
+            Haki holownicze • Czujniki parkowania • Kamery cofania •
+            Kodowanie wiązek • Radioodtwarzacze • Regeneracja reflektorów
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#services" class="btn">
+                Zobacz ofertę
+            </a>
+
+            <a href="tel:+48663647414" class="btn btn-outline">
+                Zadzwoń
+            </a>
+
+        </div>
+
+        <div class="hero-scroll">
+
+            <span>Przewiń niżej</span>
+
+        </div>
+
+    </div>
 
 </section>
-
-<!-- ABOUT -->
-<section id="about" class="section">
-  <h2>O firmie</h2>
-  <p>
-    Auto-System Retrofit to lokalny warsztat zajmujący się montażem i doposażeniem samochodów w systemy elektroniczne.
-    Specjalizujemy się w hakach holowniczych, czujnikach parkowania, kamerach cofania i retrofitach.
-  </p>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="section">
-  <h2>Usługi</h2>
-
-  <div class="grid">
-    <div class="card">🔧 Haki</div>
-    <div class="card">⚡ Wiązki</div>
-    <div class="card">📡 Czujniki parkowania</div>
-    <div class="card">📷 Kamery cofania</div>
-    <div class="card">💻 Kodowaniewiązek haków holowniczych</div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section id="reviews" class="section reveal">
-  <h2>Opinie klientów</h2>
-
-  <div class="reviews-grid">
-
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <p>
-        W 100% polecam! Pomoc w doborze haka i wiązki do auta, wszystko dokładnie wytłumaczone.
-        Montaż szybki i perfekcyjny, dodatkowo gratis adapter do przyczepy.
-      </p>
-      <span>— Kasia</span>
-    </div>
-
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <p>
-        Bardzo wysoka jakość wykonania. Montaż haka z kodowaniem – jak w ASO, ale zdecydowanie taniej.
-      </p>
-      <span>— Artur</span>
-    </div>
-
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <p>
-        Świetna robota. Hak zamontowany w jeden dzień, pełne doradztwo i bardzo dobre podejście do klienta.
-      </p>
-      <span>— Kamil</span>
-    </div>
-
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <p>
-        Montaż radia wykonany perfekcyjnie. Bardzo dobra komunikacja i fachowe doradztwo.
-      </p>
-      <span>— Beata</span>
-    </div>
-
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <p>
-        Montaż czujników parkowania i wideorejestratora w Hyundai Tucson – szybko i profesjonalnie.
-      </p>
-      <span>— Konrad</span>
-    </div>
-
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <p>
-        Dwa montaże: PDC i hak holowniczy. Bardzo dobre doradztwo i szybka realizacja.
-      </p>
-      <span>— Nadia</span>
-    </div>
-
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section">
-  <h2>Kontakt</h2>
-  <p>📍 Zielona Góra, ul. Sienkiewicza</p>
-  <p>📞 +48 663 647 414</p>
-  <p>✉️ piotrkostek88@gmail.com</p>
-</section>
-  <div class="contact-form">
-
-  <h3>Napisz do nas</h3>
-
-  <form action="https://formsubmit.co/kostekpiotr88@gmail.com" method="POST">
-
-    <input type="text" name="name" placeholder="Imię i nazwisko" required>
-
-    <input type="email" name="email" placeholder="E-mail" required>
-
-    <input type="tel" name="phone" placeholder="Telefon (opcjonalnie)">
-
-    <textarea name="message" rows="5" placeholder="Opisz czego potrzebujesz..." required></textarea>
-
-    <!-- zabezpieczenie anty-spam -->
-    <input type="hidden" name="_captcha" value="false">
-
-    <!-- po wysłaniu -->
-    <input type="hidden" name="_subject" value="Nowa wiadomość - Auto-System Retrofit">
-
-    <button type="submit">Wyślij wiadomość</button>
-
-  </form>
-
-</div>
-
-<footer>
-  © 2026 Auto-System Retrofit
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
+```
