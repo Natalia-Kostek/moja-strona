@@ -313,3 +313,7 @@ header, .hero, section{
   opacity:1 !important;
   z-index:2;
 }
+.section{
+  opacity:1 !important;
+  transform:none !important;
+}
