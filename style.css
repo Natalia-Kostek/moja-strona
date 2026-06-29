@@ -159,3 +159,58 @@ footer{
   padding:30px;
   opacity:0.6;
 }
+/* =========================
+   MOBILE CONTACT BAR
+========================= */
+
+.mobile-bar{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  display:flex;
+  justify-content:space-around;
+  background:rgba(0,0,0,0.85);
+  backdrop-filter:blur(12px);
+  padding:10px 0;
+  z-index:9999;
+}
+
+.mobile-bar a{
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+}
+
+/* ukryj na desktopie */
+@media(min-width:768px){
+  .mobile-bar{
+    display:none;
+  }
+}
+
+/* =========================
+   LIGHTBOX (GALLERY)
+========================= */
+
+.gallery-item img{
+  cursor:pointer;
+}
+
+/* overlay */
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.9);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:99999;
+}
+
+.lightbox img{
+  max-width:90%;
+  max-height:80%;
+  border-radius:10px;
+}
