@@ -1,76 +1,76 @@
 /* =========================
-   UNIVERSAL HERO SLIDER FIX
-   (STABLE VERSION)
+   LOADER
+========================= */
+
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+  if (loader) {
+    loader.style.opacity = "0";
+    loader.style.transition = "0.5s ease";
+    setTimeout(() => loader.style.display = "none", 500);
+  }
+});
+
+/* =========================
+   HERO SLIDER
 ========================= */
 
 const slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
 
-let current = 0;
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove("active");
+    slide.style.opacity = "0";
+  });
 
-function showSlide(index){
-  slides.forEach((s, i) => {
-    s.classList.remove("active");
-    if(i === index){
-      s.classList.add("active");
+  if (slides[index]) {
+    slides[index].classList.add("active");
+    slides[index].style.opacity = "0.35";
+  }
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+setInterval(nextSlide, 5000);
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = "1";
+      entry.target.style.transform = "translateY(0)";
     }
   });
-}
+}, {
+  threshold: 0.1
+});
 
-function nextSlide(){
-  current++;
-  if(current >= slides.length){
-    current = 0;
-  }
-  showSlide(current);
-}
-
-// start
-if(slides.length > 0){
-  showSlide(0);
-  setInterval(nextSlide, 5000);
-}
+document.querySelectorAll("section, .service-card, .feature, .review-card").forEach(el => {
+  el.style.opacity = "0";
+  el.style.transform = "translateY(30px)";
+  el.style.transition = "0.6s ease";
+  observer.observe(el);
+});
 
 /* =========================
-   SAFETY FIX (backup)
+   SMOOTH NAV SCROLL FIX
 ========================= */
 
-setTimeout(() => {
-  if(!document.querySelector(".slide.active") && slides.length){
-    showSlide(0);
-  }
-}, 1000);
-
-/* =========================
-   NAV SMOOTH SCROLL
-========================= */
-
-document.querySelectorAll("nav a").forEach(a => {
-  a.addEventListener("click", (e) => {
-    const target = document.querySelector(a.getAttribute("href"));
-    if(target){
+document.querySelectorAll("nav a").forEach(link => {
+  link.addEventListener("click", (e) => {
+    const href = link.getAttribute("href");
+    if (href.startsWith("#")) {
       e.preventDefault();
-      target.scrollIntoView({behavior:"smooth"});
+      document.querySelector(href).scrollIntoView({
+        behavior: "smooth"
+      });
     }
   });
-});
-/* =========================
-   HEADER SCROLL EFFECT PRO
-========================= */
-
-const header = document.querySelector("header") || document.querySelector(".header");
-
-window.addEventListener("scroll", () => {
-  if(window.scrollY > 50){
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
-  }
-});
-window.addEventListener("load", () => {
-  const loader = document.getElementById("loader");
-  if(loader){
-    loader.style.opacity = "0";
-    loader.style.pointerEvents = "none";
-    setTimeout(() => loader.remove(), 500);
-  }
 });
