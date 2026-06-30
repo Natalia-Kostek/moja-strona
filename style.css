@@ -1166,3 +1166,98 @@ body{
   border:1px solid rgba(255,255,255,0.08);
   box-shadow:0 20px 50px rgba(0,0,0,0.4);
 }
+/* ==========================
+   PULSUJĄCY BANER
+========================== */
+
+.promo-banner{
+    width:100%;
+    padding:30px 20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#0b0b0b;
+}
+
+.promo-content{
+
+    max-width:1200px;
+    width:100%;
+
+    padding:30px;
+
+    text-align:center;
+
+    font-size:2rem;
+    font-weight:800;
+
+    color:#fff;
+
+    border:3px solid #ff2d2d;
+    border-radius:18px;
+
+    background:linear-gradient(
+    90deg,
+    #220000,
+    #4a0000,
+    #220000);
+
+    box-shadow:
+    0 0 20px rgba(255,0,0,.5),
+    0 0 45px rgba(255,0,0,.3);
+
+    animation:
+    pulseGlow 2s infinite ease-in-out;
+
+}
+
+.promo-content span{
+
+    color:#ff3b3b;
+
+}
+
+@keyframes pulseGlow{
+
+0%{
+
+transform:scale(1);
+
+box-shadow:
+0 0 15px rgba(255,0,0,.45),
+0 0 30px rgba(255,0,0,.25);
+
+}
+
+50%{
+
+transform:scale(1.025);
+
+box-shadow:
+0 0 35px rgba(255,0,0,.9),
+0 0 80px rgba(255,0,0,.55);
+
+}
+
+100%{
+
+transform:scale(1);
+
+box-shadow:
+0 0 15px rgba(255,0,0,.45),
+0 0 30px rgba(255,0,0,.25);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.promo-content{
+
+font-size:1.3rem;
+padding:22px;
+
+}
+
+}
