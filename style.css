@@ -1512,3 +1512,7 @@ padding:22px;
     transform:scale(1.08);
   }
 }
+header .logo img{
+  height:72px !important;
+  max-width:220px !important;
+}
