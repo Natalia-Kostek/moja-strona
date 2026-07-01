@@ -1409,3 +1409,6 @@ padding:22px;
 .contact-card *{
     margin:0;
 }
+.contact-card{
+    transform:none !important;
+}
