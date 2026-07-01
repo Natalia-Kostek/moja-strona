@@ -1404,3 +1404,10 @@ padding:22px;
 
     color:#fff;
 }
+.contact-card{
+    padding:14px 16px !important;
+    border-radius:18px;
+}
+.contact-card *{
+    margin:0;
+}
