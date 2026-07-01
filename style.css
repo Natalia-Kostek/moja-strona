@@ -1292,8 +1292,10 @@ padding:22px;
     position:relative;
     overflow:hidden;
 
-    padding:40px 30px;
-    border-radius:28px;
+   .contact-card{
+    padding:18px 20px;
+    border-radius:20px;
+}
 
     background:rgba(255,255,255,.06);
     backdrop-filter:blur(30px);
