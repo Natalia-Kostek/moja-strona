@@ -74,3 +74,37 @@ window.addEventListener("load", () => {
     setTimeout(() => loader.remove(), 500);
   }
 });
+const track = document.querySelector(".reviews-track");
+const cards = document.querySelectorAll(".review-card");
+const next = document.querySelector(".next");
+const prev = document.querySelector(".prev");
+
+let index = 0;
+
+function update(){
+  const width = cards[0].offsetWidth + 20;
+  track.style.transform = `translateX(-${index * width}px)`;
+}
+
+next.addEventListener("click", ()=>{
+  if(index < cards.length - 1){
+    index++;
+    update();
+  }
+});
+
+prev.addEventListener("click", ()=>{
+  if(index > 0){
+    index--;
+    update();
+  }
+});
+
+setInterval(()=>{
+  if(index < cards.length - 1){
+    index++;
+  } else {
+    index = 0;
+  }
+  update();
+}, 5000);
